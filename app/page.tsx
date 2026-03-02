@@ -25,7 +25,7 @@ const links = [
   {
     id: 1,
     title: "Especial Dia da Mulher",
-    subtitle: "50% no Clareamento",
+    subtitle: "Clareamento com 50% OFF",
     icon: <Flower className="w-6 h-6 text-[#E1C699]" />,
     message:
       "Olá, gostaria de participar da Campanha Especial Dia da Mulher da Matiello Odontologia. Tenho interesse em receber as orientações sobre o benefício exclusivo no clareamento dental e agendar minha avaliação personalizada.",
@@ -33,7 +33,7 @@ const links = [
   {
     id: 2,
     title: "Agendar Avaliação",
-    subtitle: "",
+    subtitle: "Seu novo sorriso começa aqui.",
     icon: <Calendar className="w-6 h-6 text-[#E1C699]" />,
     message:
       "Olá, gostaria de agendar uma avaliação personalizada na Matiello Odontologia. Tenho interesse em receber um planejamento individualizado para meu sorriso.",
