@@ -19,14 +19,13 @@ const ToothIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const PHONE_NUMBER = "5511999999999"; // Replace with actual number
+const PHONE_NUMBER = "54999153605"; // Replace with actual number
 
 const links = [
   {
     id: 1,
     title: "Campanha Especial Dia da Mulher",
-    subtitle:
-      "Benefício exclusivo no clareamento dental com avaliação personalizada.",
+    subtitle: "Benefício exclusivo no clareamento.",
     icon: <Flower className="w-6 h-6 text-[#E1C699]" />,
     message:
       "Olá, gostaria de participar da Campanha Especial Dia da Mulher da Matiello Odontologia. Tenho interesse em receber as orientações sobre o benefício exclusivo no clareamento dental e agendar minha avaliação personalizada.",
@@ -34,7 +33,7 @@ const links = [
   {
     id: 2,
     title: "Agendar Avaliação Personalizada",
-    subtitle: "Planejamento individualizado para seu sorriso.",
+    subtitle: "Planejamento do seu sorriso.",
     icon: <Calendar className="w-6 h-6 text-[#E1C699]" />,
     message:
       "Olá, gostaria de agendar uma avaliação personalizada na Matiello Odontologia. Tenho interesse em receber um planejamento individualizado para meu sorriso.",
@@ -42,7 +41,7 @@ const links = [
   {
     id: 3,
     title: "Lentes de Contato Dental",
-    subtitle: "Planejamento estético de alto padrão.",
+    subtitle: "Estética dental de alto padrão.",
     icon: <Sparkles className="w-6 h-6 text-[#E1C699]" />,
     message:
       "Olá, tenho interesse em realizar lentes de contato dental. Gostaria de agendar uma avaliação para entender as possibilidades de planejamento estético personalizado.",
@@ -50,7 +49,7 @@ const links = [
   {
     id: 4,
     title: "Implantes Dentários",
-    subtitle: "Reabilitação oral com segurança e precisão.",
+    subtitle: "Reabilitação oral com precisão.",
     icon: <ToothIcon className="w-6 h-6 text-[#E1C699]" />,
     message:
       "Olá, gostaria de receber informações sobre implantes dentários. Tenho interesse em agendar uma avaliação para planejamento de reabilitação oral.",
@@ -58,7 +57,7 @@ const links = [
   {
     id: 5,
     title: "Atendimento Prioritário",
-    subtitle: "Avaliação rápida para casos urgentes.",
+    subtitle: "Avaliação rápida para urgências.",
     icon: <Clock className="w-6 h-6 text-[#E1C699]" />,
     message:
       "Olá, preciso de atendimento prioritário. Estou com desconforto e gostaria de verificar disponibilidade para avaliação o quanto antes.",
@@ -152,7 +151,7 @@ export default function Home() {
 
                 {/* Text Content */}
                 <div className="flex-1 min-w-0 pr-4">
-                  <h2 className="text-base sm:text-lg font-medium text-white mb-1 truncate group-hover:text-[#E1C699] transition-colors duration-300">
+                  <h2 className="text-base sm:text-lg font-medium text-white mb-1 leading-tight group-hover:text-[#E1C699] transition-colors duration-300">
                     {link.title}
                   </h2>
                   <p className="text-xs sm:text-sm text-white/60 leading-snug line-clamp-2">
