@@ -24,16 +24,16 @@ const PHONE_NUMBER = "54999153605"; // Replace with actual number
 const links = [
   {
     id: 1,
-    title: "Campanha Especial Dia da Mulher",
-    subtitle: "Benefício exclusivo no clareamento.",
+    title: "Especial Dia da Mulher",
+    subtitle: "50% no Clareamento",
     icon: <Flower className="w-6 h-6 text-[#E1C699]" />,
     message:
       "Olá, gostaria de participar da Campanha Especial Dia da Mulher da Matiello Odontologia. Tenho interesse em receber as orientações sobre o benefício exclusivo no clareamento dental e agendar minha avaliação personalizada.",
   },
   {
     id: 2,
-    title: "Agendar Avaliação Personalizada",
-    subtitle: "Planejamento do seu sorriso.",
+    title: "Agendar Avaliação",
+    subtitle: "",
     icon: <Calendar className="w-6 h-6 text-[#E1C699]" />,
     message:
       "Olá, gostaria de agendar uma avaliação personalizada na Matiello Odontologia. Tenho interesse em receber um planejamento individualizado para meu sorriso.",
@@ -151,12 +151,14 @@ export default function Home() {
 
                 {/* Text Content */}
                 <div className="flex-1 min-w-0 pr-4">
-                  <h2 className="text-base sm:text-lg font-medium text-white mb-1 leading-tight group-hover:text-[#E1C699] transition-colors duration-300">
+                  <h2 className={`text-base sm:text-lg font-medium text-white leading-tight group-hover:text-[#E1C699] transition-colors duration-300 ${link.subtitle ? 'mb-1' : ''}`}>
                     {link.title}
                   </h2>
-                  <p className="text-xs sm:text-sm text-white/60 leading-snug line-clamp-2">
-                    {link.subtitle}
-                  </p>
+                  {link.subtitle && (
+                    <p className="text-xs sm:text-sm text-white/60 leading-snug line-clamp-2">
+                      {link.subtitle}
+                    </p>
+                  )}
                 </div>
 
                 {/* Arrow */}
