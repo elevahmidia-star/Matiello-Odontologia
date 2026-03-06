@@ -132,9 +132,9 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => {
-    if (typeof window !== "undefined" && window.fbq) {
-      window.fbq('track', 'Lead', { content_name: link.title });
-    }
+    if (typeof window !== "undefined" && (window as any).fbq) {
+  (window as any).fbq('track', 'Lead', { content_name: link.title });
+}
   }}
                 className={`group relative flex items-center p-4 sm:p-5 w-full bg-[#141414] border rounded-2xl transition-all duration-300 hover:bg-[#1a1a1a] hover:-translate-y-0.5 ${
                   link.id === 1
