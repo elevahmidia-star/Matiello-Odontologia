@@ -1,6 +1,5 @@
-"use client";
 import Image from "next/image";
-import { ChevronRight, Calendar, Sparkles, Clock, Flower } from "lucide-react";
+import { ChevronRight, Calendar, Sparkles, Clock, Star } from "lucide-react";
 
 // Custom Tooth Icon
 const ToothIcon = ({ className }: { className?: string }) => (
@@ -25,11 +24,10 @@ const PHONE_NUMBER = "54999153605"; // Replace with actual number
 const links = [
   {
     id: 1,
-    title: "Especial Dia da Mulher",
-    subtitle: "Clareamento com 50% OFF",
-    icon: <Flower className="w-6 h-6 text-[#E1C699]" />,
-    message:
-      "Olá, gostaria de participar da Campanha Especial Dia da Mulher da Matiello Odontologia. Tenho interesse em receber as orientações sobre o benefício exclusivo no clareamento dental e agendar minha avaliação personalizada.",
+    title: "Avaliar no Google",
+    subtitle: "Sua opinião é muito importante para nós",
+    icon: <Star className="w-6 h-6 text-[#E1C699]" />,
+    url: "https://www.google.com/search?q=matiello+odontologia&rlz=1C1VDKB_pt-PTBR1156BR1156&oq=matiello+odontologia&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgoIARAAGIAEGKIEMgcIAhAAGO8FMgcIAxAAGO8FMgoIBBAAGIAEGKIEMgcIBRAAGO8FMgYIBhBFGDwyBggHEEUYPNIBCTQ0NTlqMWoxNagCCLACAfEF3lUYAXolq9fxBd5VGAF6JavX&sourceid=chrome&ie=UTF-8",
   },
   {
     id: 2,
@@ -124,32 +122,16 @@ export default function Home() {
         {/* Links Section */}
         <div className="w-full space-y-4">
           {links.map((link) => {
-            const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(link.message)}`;
+            const href = link.url || `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(link.message || "")}`;
 
             return (
               <a
                 key={link.id}
-                href={whatsappUrl}
+                href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => {
-    if (typeof window !== "undefined" && (window as any).fbq) {
-  (window as any).fbq('track', 'Lead', { content_name: link.title });
-}
-  }}
-                className={`group relative flex items-center p-4 sm:p-5 w-full bg-[#141414] border rounded-2xl transition-all duration-300 hover:bg-[#1a1a1a] hover:-translate-y-0.5 ${
-                  link.id === 1
-                    ? "border-[#E1C699]/40 hover:border-[#E1C699]/60 shadow-[0_0_15px_rgba(225,198,153,0.1)] hover:shadow-[0_0_25px_rgba(225,198,153,0.25)]"
-                    : "border-[#E1C699]/20 hover:border-[#E1C699]/40 hover:shadow-[0_0_20px_rgba(225,198,153,0.15)]"
-                }`}
+                className="group relative flex items-center p-4 sm:p-5 w-full bg-[#141414] border border-[#E1C699]/20 rounded-2xl transition-all duration-300 hover:bg-[#1a1a1a] hover:border-[#E1C699]/40 hover:shadow-[0_0_20px_rgba(225,198,153,0.15)] hover:-translate-y-0.5"
               >
-                {/* Exclusivo Badge */}
-                {link.id === 1 && (
-                  <div className="absolute -top-2.5 right-4 bg-[#E1C699] text-[#0a0a0a] text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full shadow-[0_0_10px_rgba(225,198,153,0.3)]">
-                    Exclusivo
-                  </div>
-                )}
-
                 {/* Icon */}
                 <div className="flex-shrink-0 mr-4 p-2 bg-[#E1C699]/5 rounded-xl group-hover:bg-[#E1C699]/10 transition-colors duration-300">
                   {link.icon}
