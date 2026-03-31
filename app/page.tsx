@@ -27,7 +27,7 @@ const links = [
     title: "Avaliar no Google",
     subtitle: "Sua opinião é muito importante para nós",
     icon: <Star className="w-6 h-6 text-[#E1C699]" />,
-    url: "https://www.google.com/search?q=matiello+odontologia&rlz=1C1VDKB_pt-PTBR1156BR1156&oq=matiello+odontologia&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgoIARAAGIAEGKIEMgcIAhAAGO8FMgcIAxAAGO8FMgoIBBAAGIAEGKIEMgcIBRAAGO8FMgYIBhBFGDwyBggHEEUYPNIBCTQ0NTlqMWoxNagCCLACAfEF3lUYAXolq9fxBd5VGAF6JavX&sourceid=chrome&ie=UTF-8",
+    url: "https://g.page/r/CXnQuHOVsbQ-EAE/review",
   },
   {
     id: 2,
